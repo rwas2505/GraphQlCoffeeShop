@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace GraphQlProject.Query
 {
-    public class Reservation : ObjectGraphType
+    public class ReservationQuery : ObjectGraphType
     {
-        public Reservation(IReservation reservationService)
+        public ReservationQuery(IReservation reservationService)
         {
             Field<ReservationType>("reservations", resolve: context => { return reservationService.GetReservations(); });
         }
