@@ -9,6 +9,7 @@ namespace GraphQlProject.Type
 {
     public class MenuType : ObjectGraphType<Menu>
     {
+        //this is what is returned as a json object, its readonly and doesn't have types
         public MenuType()
         {
             Field(m => m.Id);
