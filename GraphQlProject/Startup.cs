@@ -48,7 +48,7 @@ namespace GraphQlProject
                 options.EnableMetrics = false;
             }).AddSystemTextJson();
 
-            services.AddDbContext<GraphQLDbContext>(option => option.UseSqlServer(@"Data Source= (localdb)\LocalTestDB;Initial Catalog=GraphQLDb;Integrated Security = True"));
+            services.AddDbContext<GraphQLDbContext>(option => option.UseSqlServer(@"Data Source= (localdb)\LocalTestDB;Initial Catalog=CoffeeShopDb;Integrated Security = True"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
