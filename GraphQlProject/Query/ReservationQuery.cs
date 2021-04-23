@@ -12,7 +12,7 @@ namespace GraphQlProject.Query
     {
         public ReservationQuery(IReservation reservationService)
         {
-            Field<ReservationType>("reservations", resolve: context => { return reservationService.GetReservations(); });
+            Field<ListGraphType<ReservationType>>("reservations", resolve: context => { return reservationService.GetReservations(); });
         }
     }
 }
