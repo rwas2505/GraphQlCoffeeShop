@@ -4,6 +4,7 @@ using GraphQL.Server;
 using GraphQL.Types;
 using GraphQlProject.Data;
 using GraphQlProject.Interfaces;
+using GraphQlProject.Mutation;
 using GraphQlProject.Query;
 using GraphQlProject.Schema;
 using GraphQlProject.Services;
@@ -40,7 +41,13 @@ namespace GraphQlProject
             services.AddTransient<SubMenuQuery>();
             services.AddTransient<ReservationQuery>();
             services.AddTransient<RootQuery>();
-            //services.AddTransient<ProductMutation>();
+            services.AddTransient<MenuMutation>();
+            services.AddTransient<SubMenuMutation>();
+            services.AddTransient<ReservationMutation>();
+            services.AddTransient<RootMutation>();
+            services.AddTransient<MenuInputType>();
+            services.AddTransient<SubMenuInputType>();
+            services.AddTransient<ReservationInputType>();
             services.AddTransient<ISchema, RootSchema>();
 
             services.AddGraphQL(options => 
