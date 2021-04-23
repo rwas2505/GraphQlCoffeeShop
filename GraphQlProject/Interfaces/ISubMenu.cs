@@ -10,6 +10,6 @@ namespace GraphQlProject.Interfaces
     {
         List<SubMenu> GetSubMenus();
         List<SubMenu> GetSubMenus(int menuId);
-        SubMenu AddSubMenu(SubMenu submenu);
+        SubMenu AddSubMenu(SubMenu subMenu);
     }
 }
